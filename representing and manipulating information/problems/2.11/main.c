@@ -8,12 +8,12 @@ void inplace_swap(int *x, int *y){
 
 void reverse_array(int arr[], int count) {
     int first, last;
-    for (first = 0, last = count-1; first <= last; first++,last--)
+    for (first = 0, last = count-1; first < last; first++,last--)
     inplace_swap(&arr[first], &arr[last]);
 }
 
 int main(){
-    int array[] = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+    int array[] = {1, 2, 3, 4, 5, 6};
     int size = sizeof(array)/sizeof(array[0]);
 
     reverse_array(array, size);
